@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="sync\" />
+    <Folder Include="model\" />
+    <Folder Include="helpers\" />
+    <Folder Include="dist\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="Humanizer.Core.es" Version="2.4.2" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0-preview1-35029" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0-preview1-35029" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0-preview1-35029" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="facturasEnviadas\facturaElectronica_18186.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_18186.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_18192.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_18199.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_998506.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_998506.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_998507.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_998507.pdf" />
+    <None Remove="facturasEnviadas\facturaElectronica_998499.pdf" />
+    <None Remove="facturasEnviadas\facturaElectronica_1075904.pdf" />
+    <None Remove="facturasEnviadas\facturaElectronica_1075907.xml" />
+    <None Remove="facturasEnviadas\facturaElectronica_1075906.pdf" />
+    <None Remove="faceleccp.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ServiceReference1\Reference.cs" />
+    <Compile Remove="helpers\RestHelper.cs" />
+    <Compile Remove="Service\FacElecService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="libwkhtmltox.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="libwkhtmltox.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="libwkhtmltox.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="dist\template.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="provincias.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
